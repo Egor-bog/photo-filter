@@ -12,6 +12,8 @@ const inputs = document.querySelectorAll('.filters input');
 
 // Обработчик кнопок
 
+  //Reset
+
 document.querySelector('.btn-container .btn-reset').onclick = function() {
   inputs.forEach(function reset (input) {
     const suffix = input.dataset.sizing || '';
@@ -25,4 +27,14 @@ document.querySelector('.btn-container .btn-reset').onclick = function() {
       document.querySelector(`.filters output[name=${input.name}]`).textContent = input.value;
     }
   })
+}
+
+  //Next pictuer
+
+//https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg
+
+//https://github.com/Egor-bog/photo-filter-image/raw/main/images/evening/01.jpg
+
+document.querySelector('.btn-container .btn-next').onclick = function () {
+  document.querySelector('#nextImg').src = "https://github.com/Egor-bog/photo-filter-image/raw/main/images/evening/01.jpg";
 }
